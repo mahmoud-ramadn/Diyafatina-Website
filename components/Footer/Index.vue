@@ -29,8 +29,9 @@
           <nuxt-link
             to="#"
             class="text-gray-700 font-medium mb-2 text-sm cursor-pointer hover:text-primary"
-            >الرئيسية</nuxt-link
           >
+            الرئيسية
+          </nuxt-link>
           <li
             class="text-gray-700 mb-2 font-medium text-sm cursor-pointer hover:text-primary"
           >
@@ -68,14 +69,10 @@
       <div class="flex items-center gap-x-4">
         <nuxt-link
           to="#"
-          class="text-gray-600 font-medium md:text-base text-sm cursor-pointer hover:text-primary border-l pl-4"
-          >سياسة الخصوصية</nuxt-link
-        >
+          class="text-gray-600 font-medium md:text-base text-sm cursor-pointer hover:text-primary border-l pl-4">سياسة الخصوصية  </nuxt-link>
         <nuxt-link
           to="#"
-          class="text-gray-600 font-medium md:text-base text-sm cursor-pointer hover:text-primary"
-          >الشروط والأحكام</nuxt-link
-        >
+          class="text-gray-600 font-medium md:text-base text-sm cursor-pointer hover:text-primary"> الشروط والأحكام</nuxt-link>
       </div>
     </div>
   </div>

@@ -9,10 +9,10 @@
         <ul class="flex items-center gap-6 md:gap-10">
           <li v-for="(item, index) in navLinks" :key="index">
             <nuxt-link
-              @click="scrollToNextSection(item.section)"
-              to="#"
               class="hover:text-primary/80 transition-all duration-150 text-sm md:text-base"
               :class="[index < 1 ? 'text-primary' : 'text-gray-500']"
+              to="#"
+              @click="scrollToNextSection(item.section)"
             >
               {{ item.name }}
             </nuxt-link>
@@ -33,7 +33,7 @@
         </a>
       </div>
 
-      <button @click="toggleMenu" class="md:hidden ml-2">
+      <button class="md:hidden ml-2" @click="toggleMenu()">
         <svg
           class="w-6 h-6"
           fill="none"
@@ -106,9 +106,11 @@ function scrollToNextSection(sectionName: string) {
 
 const isMenuOpen = ref(false);
 
-function toggleMenu(section: string) {
+function toggleMenu(section?: string) {
   isMenuOpen.value = !isMenuOpen.value;
 
-  scrollToNextSection(section);
+  if (section) {
+    scrollToNextSection(section);
+  }
 }
 </script>
