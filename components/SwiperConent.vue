@@ -35,11 +35,12 @@
 import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
-// Images
 import one from "../assets/images/screen shot/img-1.webp";
 import two from "../assets/images/screen shot/img-2.webp";
 import three from "../assets/images/screen shot/img-3.webp";
 import four from "../assets/images/screen shot/img-4.webp";
+// Images
+import zero from '../assets/images/screen shot/Mask group.webp'
 
 // Swiper styles
 import "swiper/css";
@@ -48,5 +49,5 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // Image array
-const images = ref([one, two, three, four]);
+const images = ref([zero, one, two, three, four]);
 </script>
