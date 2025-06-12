@@ -25,6 +25,7 @@
     "radix-vue": "^1.9.7",
     "shadcn-nuxt": "^0.10.4",
     "svgo": "^3.3.2",
+    "swiper": "^11.2.8",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "vee-validate": "^4.15.1",
