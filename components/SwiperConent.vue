@@ -7,7 +7,7 @@
         :speed="600"
         :centered-slides="true"
         :loop="true"
-        :autoplay="false"
+        :autoplay="{ delay: 2500, disableOnInteraction: false }"
         :breakpoints="{
           320: {
             slidesPerView: 1,
