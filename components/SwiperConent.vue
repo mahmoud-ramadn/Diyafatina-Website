@@ -1,53 +1,104 @@
 <template>
-  <client-only>
-    <section class="container p-10 relative flex justify-center items-center">
+  <div class="relative py-16">
+    <div class="container flex items-center justify-center">
       <Swiper
-        :space-between="30"
-        effect="fade"
+        :modules="[Autoplay]"
+        :space-between="20"
+        :speed="600"
+        :centered-slides="true"
         :loop="true"
-        :autoplay="{ delay: 2000, disableOnInteraction: false }"
-        :pagination="false"
-        :navigation="false"
-        :modules="[Autoplay, EffectFade]"
-        class="rounded"
-        style="width: 200px; height: 390px"
+        :autoplay="false"
+        :breakpoints="{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            centeredSlides: true,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+            centeredSlides: true,
+          },
+          1440: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+            centeredSlides: true,
+          },
+        }"
+        class="max-w-[900px] mx-auto relative h-[400px]"
       >
         <SwiperSlide v-for="(image, index) in images" :key="index">
           <img
             :src="image"
-            :alt="`Slide image ${index + 1}`"
-            class="w-full h-full object-contain"
+            :alt="`Slide ${index + 1}`"
+            class="rounded-lg transition-all duration-300 object-cover"
           />
         </SwiperSlide>
-      </Swiper>
 
-      <!-- Frame image -->
-      <img
-        src="/assets/images/screen shot/Mask group.jpg"
-        alt="frame"
-        class="absolute w-[190px] h-[390px] pointer-events-none"
-      />
-    </section>
-  </client-only>
+        <img
+          src="/assets/images/screen shot/Mask group.jpg"
+          alt="Mobile Frame"
+          class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 lg:h-[300px] lg:w-[155px]"
+        />
+      </Swiper>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { Autoplay, EffectFade } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
-import one from "../assets/images/screen shot/img-1.webp";
-import two from "../assets/images/screen shot/img-2.webp";
-import three from "../assets/images/screen shot/img-3.webp";
-import four from "../assets/images/screen shot/img-4.webp";
-// Images
-import zero from '../assets/images/screen shot/Mask group.webp'
-
-// Swiper styles
+// Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-fade";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
-// Image array
-const images = ref([zero, one, two, three, four]);
+// Import images
+// eslint-disable-next-line import/no-duplicates
+import img1 from "../assets/images/swiper/three.png";
+// eslint-disable-next-line import/no-duplicates
+import img6 from "../assets/images/swiper/three.png";
+import img2 from "../assets/images/swiper/الرئيسية – 2.png";
+// eslint-disable-next-line import/no-duplicates
+import img3 from "../assets/images/swiper/دورات حضورية (3).png";
+// eslint-disable-next-line import/no-duplicates
+import img5 from "../assets/images/swiper/دورات حضورية (3).png";
+import img4 from "../assets/images/swiper/دورات حضورية.png";
+
+// Sample images array with imported images
+const images = [img1, img2, img3, img4, img5, img6];
 </script>
+
+<style>
+.swiper-slide-active img {
+  @apply lg:w-[200px]  w-[191px];
+}
+
+.swiper-slide {
+  @apply flex items-center justify-center;
+}
+
+.swiper-slide:not(.swiper-slide-active) img {
+  @apply w-[134px];
+}
+
+.swiper-slide-active {
+  @apply flex items-center justify-center;
+
+  @apply opacity-100 scale-100 z-50;
+}
+.swiper {
+  @apply flex items-center justify-center;
+}
+</style>
