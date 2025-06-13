@@ -48,7 +48,7 @@
         <img
           src="/assets/images/screen shot/Mask group.jpg"
           alt="Mobile Frame"
-          class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 lg:h-[300px] lg:w-[155px]"
+          class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 "
         />
       </Swiper>
     </div>
