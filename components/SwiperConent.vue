@@ -16,22 +16,22 @@
           },
           480: {
             slidesPerView: 1,
-            spaceBetween: 15,
+            spaceBetween: 0,
             centeredSlides: true,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 0,
             centeredSlides: true,
           },
           1024: {
-            slidesPerView: 3,
-            spaceBetween: 25,
+            slidesPerView: 4,
+            spaceBetween: 0,
             centeredSlides: true,
           },
           1440: {
             slidesPerView: 5,
-            spaceBetween: 20,
+            spaceBetween: 0,
             centeredSlides: true,
           },
         }"
@@ -48,7 +48,7 @@
         <img
           src="/assets/images/screen shot/Mask group.jpg"
           alt="Mobile Frame"
-          class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 "
+          class="absolute top-[48%] left-1/2 -translate-y-1/2 -translate-x-1/2 "
         />
       </Swiper>
     </div>
@@ -82,7 +82,7 @@ const images = [img1, img2, img3, img4, img5, img6];
 
 <style>
 .swiper-slide-active img {
-  @apply lg:w-[200px]  w-[191px];
+  @apply lg:w-[194px] lg:h-[90%] w-[191px] object-cover;
 }
 
 .swiper-slide {
