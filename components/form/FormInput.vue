@@ -1,6 +1,6 @@
 <template>
   <div class="text-start">
-    <label :for="id" class="  text-sm  font-medium text-gray-900">
+    <label :for="id" class="text-sm font-medium text-gray-900">
       {{ label }}
     </label>
     <input
@@ -28,7 +28,7 @@ interface Props {
   error?: string;
   isDirty?: boolean;
   isBlurred?: boolean;
-  label?: string
+  label?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -39,7 +39,7 @@ const emit = defineEmits<{
   "update:modelValue": [value: string];
   // eslint-disable-next-line style/quote-props
   blur: [];
-  "dirty": [isDirty: boolean];
+  dirty: [isDirty: boolean];
 }>();
 
 const handleInput = (event: Event) => {
@@ -48,10 +48,13 @@ const handleInput = (event: Event) => {
   emit("dirty", true);
 };
 
-const showError = (error: string | undefined) => computed(() => error && (props.isDirty || props.isBlurred));
+const showError = (error: string | undefined) =>
+  computed(() => error && (props.isDirty || props.isBlurred));
 
 const inputClasses = computed(() => ({
-  "border border-red-500 focus:border-red-500 focus:ring focus:ring-red-500/15 focus:ring-opacity-50": showError(props.error).value,
-  "border border-gray-100 focus:border-blue-500 focus:ring focus:ring-primary focus:ring-opacity-50": !showError(props.error).value,
+  "border border-red-500 focus:border-red-500 focus:ring focus:ring-red-500/15 focus:ring-opacity-50":
+    showError(props.error).value,
+  "border border-gray-100 focus:border-blue-500 focus:ring focus:ring-primary focus:ring-opacity-50":
+    !showError(props.error).value,
 }));
 </script>

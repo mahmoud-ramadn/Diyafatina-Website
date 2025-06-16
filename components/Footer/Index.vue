@@ -69,15 +69,17 @@
       <div class="flex items-center gap-x-4">
         <nuxt-link
           to="#"
-          class="text-gray-600 font-medium md:text-base text-sm cursor-pointer hover:text-primary border-l pl-4">سياسة الخصوصية  </nuxt-link>
+          class="text-gray-600 font-medium md:text-base text-sm cursor-pointer hover:text-primary border-l pl-4"
+        >
+          سياسة الخصوصية
+        </nuxt-link>
         <nuxt-link
           to="#"
-          class="text-gray-600 font-medium md:text-base text-sm cursor-pointer hover:text-primary"> الشروط والأحكام</nuxt-link>
+          class="text-gray-600 font-medium md:text-base text-sm cursor-pointer hover:text-primary"
+        >
+          الشروط والأحكام
+        </nuxt-link>
       </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
-
-<style scoped></style>

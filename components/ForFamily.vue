@@ -27,7 +27,7 @@
               class="h-8 md:h-10 shrink-0 w-[100px] md:w-[122px]"
             />
           </a>
-          <a href="#" target="_blank">
+          <a href="https://apps.apple.com/eg/app/%D8%B6%D9%8A%D8%A7%D9%81%D8%AA%D9%86%D8%A7/id6458646473" target="_blank">
             <svg-icon
               name="app_stroe.svg"
               class="h-8 md:h-10 w-[100px] md:w-[122px]"

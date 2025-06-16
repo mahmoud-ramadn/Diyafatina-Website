@@ -21,8 +21,8 @@
 
 <script setup lang="ts">
 interface Props {
-  id: string
-  placeholder: string
+  id: string;
+  placeholder: string;
   modelValue: string;
   rows?: number;
   error?: string;

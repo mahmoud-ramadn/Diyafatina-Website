@@ -9,9 +9,10 @@
 
 <script setup lang="ts">
 interface Props {
-  title: string;
-  subtitle: string;
+  title: string
+  subtitle: string
 }
 
+// eslint-disable-next-line unused-imports/no-unused-vars
 const props = defineProps<Props>();
 </script>

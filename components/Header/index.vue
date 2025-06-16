@@ -11,7 +11,7 @@
             <nuxt-link
               class="hover:text-primary/80 transition-all duration-150 text-sm md:text-base"
               :class="[index < 1 ? 'text-primary' : 'text-gray-500']"
-              to="#"
+              to="/"
               @click="scrollToNextSection(item.section)"
             >
               {{ item.name }}
@@ -28,7 +28,7 @@
             class="h-8 md:h-10 shrink-0 md:w-[122px]"
           />
         </a>
-        <a href="#" target="_blank" class="w-8 md:w-auto md:block hidden">
+        <a href="https://apps.apple.com/eg/app/%D8%B6%D9%8A%D8%A7%D9%81%D8%AA%D9%86%D8%A7/id6458646473" target="_blank" class="w-8 md:w-auto md:block hidden">
           <svg-icon name="app_stroe.svg" class="h-8 md:h-10 md:w-[122px]" />
         </a>
       </div>
@@ -75,7 +75,7 @@
             class="h-8 md:h-10 shrink-0 w-[100px] md:w-[122px]"
           />
         </a>
-        <a href="#" target="_blank">
+        <a href="https://apps.apple.com/eg/app/%D8%B6%D9%8A%D8%A7%D9%81%D8%AA%D9%86%D8%A7/id6458646473" target="_blank">
           <svg-icon
             name="app_stroe.svg"
             class="h-8 md:h-10 w-[100px] md:w-[122px]"

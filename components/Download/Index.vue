@@ -23,7 +23,7 @@
                 />
               </a>
 
-              <a href="#" target="_blank" class="h-8 md:h-10">
+              <a href="https://apps.apple.com/eg/app/%D8%B6%D9%8A%D8%A7%D9%81%D8%AA%D9%86%D8%A7/id6458646473" target="_blank" class="h-8 md:h-10">
                 <svg-icon name="app_stroe.svg" class="h-8 md:h-10 w-[122px]" />
               </a>
             </div>
@@ -40,7 +40,7 @@
                 />
               </a>
 
-              <a href="#" target="_blank" class="h-8 md:h-10">
+              <a href="https://apps.apple.com/eg/app/%D8%B6%D9%8A%D8%A7%D9%81%D8%AA%D9%86%D8%A7-%D9%85%D8%B2%D9%88%D8%AF-%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D9%87/id6708242288" target="_blank" class="h-8 md:h-10">
                 <svg-icon name="app_stroe.svg" class="h-8 md:h-10 w-[122px]" />
               </a>
             </div>

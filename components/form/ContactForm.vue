@@ -86,18 +86,6 @@
           إغلاق
         </button>
       </div>
-      <!-- <div v-else class="bg-white p-8 rounded-lg shadow-lg text-center">
-        <h3 class="text-2xl font-bold text-red-500 mb-4">
-          حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى لاحقًا
-        </h3>
-        <p class="text-gray-700">شكرًا لتواصلك معنا.</p>
-        <button
-          class="mt-4 bg-purple-900 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors duration-200"
-          @click="showPopup = false"
-        >
-          إغلاق
-        </button>
-      </div> -->
     </div>
   </div>
 </template>
@@ -109,10 +97,10 @@ const schema = yup.object().shape({
   type: yup.string().required("نوع الرسالة مطلوب"), // Added validation for type
   name: yup.string().required("الاسم مطلوب"),
   phone: yup.string()
-  .required('رقم الجوال مطلوب')
-  .matches(/^\+?[0-9]{10,}$/, 'يجب أن يحتوي على أرقام فقط (10 أرقام على الأقل)')
-  .min(10, 'يجب أن يكون طول الرقم 10 أرقام على الأقل')
-  .max(15, 'يجب ألا يتجاوز طول الرقم 15 رقماً'),
+    .required('رقم الجوال مطلوب')
+    .matches(/^\+?\d{10,}$/, 'يجب أن يحتوي على أرقام فقط (10 أرقام على الأقل)')
+    .min(10, 'يجب أن يكون طول الرقم 10 أرقام على الأقل')
+    .max(15, 'يجب ألا يتجاوز طول الرقم 15 رقماً'),
   email: yup
     .string()
     .email("البريد الإلكتروني غير صحيح")
@@ -121,19 +109,19 @@ const schema = yup.object().shape({
 });
 
 interface Form {
-  type: string;
-  name: string;
-  email: string;
-  phone:string;
-  message: string;
-  [key: string]: string;
+  type: string
+  name: string
+  email: string
+  phone: string
+  message: string
+  [key: string]: string
 }
 
 const form = ref<Form>({
   type: "", // Added type field
   name: "",
   email: "",
-  phone:"",
+  phone: "",
   subject: "",
   message: "",
 });
@@ -170,7 +158,7 @@ async function validateField(field: string) {
     await fieldSchema.validate(form.value[field]);
     errors.value[field] = "";
   }
- catch (err) {
+  catch (err) {
     if (err instanceof Error) {
       errors.value[field] = err.message;
     }
@@ -188,7 +176,7 @@ async function handleSubmit() {
     showPopup.value = true;
     resetForm();
   }
- catch (err: any) {
+  catch (err: any) {
     if (yup.ValidationError.isError(err)) {
       err.inner.forEach((error: any) => {
         if (error.path) {
@@ -196,11 +184,11 @@ async function handleSubmit() {
         }
       });
     }
- else {
+    else {
       console.error("حدث خطأ غير متوقع:", err);
     }
   }
- finally {
+  finally {
     loading.value = false
   }
 }
@@ -210,7 +198,7 @@ function resetForm() {
     type: "",
     name: "",
     email: "",
-    phone:"",
+    phone: "",
     message: "",
   };
   errors.value = {};
