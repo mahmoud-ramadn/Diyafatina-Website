@@ -57,7 +57,7 @@
       <ul class="flex flex-col items-center gap-4">
         <li v-for="(item, index) in navLinks" :key="`mobile-${index}`">
           <nuxt-link
-            to="#"
+            to="/"
             class="hover:text-primary/80 transition-all duration-150 text-lg"
             :class="[index < 1 ? 'text-primary' : 'text-gray-500']"
             @click="toggleMenu(item.section)"
