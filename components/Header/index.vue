@@ -1,9 +1,9 @@
 <template>
   <header class="mt-6 md:mt-10 relative">
     <div class="container mx-auto flex justify-between items-center">
-      <div class="flex items-center gap-4">
+      <nuxt-link to="/" class="flex items-center gap-4">
         <svg-icon name="logo.svg" class="w-12 h-10 md:w-[76px] md:h-16" />
-      </div>
+      </nuxt-link>
 
       <nav class="hidden md:block">
         <ul class="flex items-center gap-6 md:gap-10">

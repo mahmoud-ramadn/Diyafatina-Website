@@ -11,7 +11,9 @@
       class="container flex flex-wrap relative py-5 justify-between gap-8 md:gap-16"
     >
       <div class="w-full md:max-w-[400px]">
-        <svg-icon name="logo.svg" class="w-12 h-10 md:w-[76px] md:h-16" />
+        <nuxt-link to="/" class="flex items-center gap-4">
+          <svg-icon name="logo.svg" class="w-12 h-10 md:w-[76px] md:h-16" />
+        </nuxt-link>
         <p class="text-gray-700 md:text-sm text-sm font-medium mt-4">
           منصة ضيافتنا تقدم تجربة فريدة لبيع الأكل البيتي، حيث نعرض أشهى الأطباق
           المنزلية المعدة بحب من قبل أسر منتجة، مع مجموعة متنوعة من الخيارات
@@ -27,7 +29,7 @@
         <h3 class="text-gray-600 font-black">روابط مفيده</h3>
         <ul class="mt-4">
           <nuxt-link
-            to="#"
+            to="/"
             class="text-gray-700 font-medium mb-2 text-sm cursor-pointer hover:text-primary"
           >
             الرئيسية
@@ -40,7 +42,7 @@
           <li
             class="text-gray-700 font-medium mb-2 text-sm cursor-pointer hover:text-primary"
           >
-            <nuxt-link to="#">الأسئلة الشائعة</nuxt-link>
+            <nuxt-link to="Faq">الأسئلة الشائعة</nuxt-link>
           </li>
         </ul>
       </div>
